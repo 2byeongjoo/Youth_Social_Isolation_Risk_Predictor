@@ -87,6 +87,8 @@ scikit-learn
 flask
 joblib
 openpyxl
+matplotlib
+seaborn
 
 ## 사용 데이터
 
@@ -97,6 +99,17 @@ openpyxl
 ## 모델 설명
 
 ## 실행 방법
+
+`powershell`에
+python src/app/app.py
+
+또는
+지금 쓰던 전체 경로 방식이면
+& c:\Users\user\git\Youth_Social_Isolation_Risk_Predictor\.venv\Scripts\python.exe c:/Users/user/git/Youth_Social_Isolation_Risk_Predictor/src/app/app.py
+
+http://127.0.0.1:5000
+이런식으로 주소가 나오게 된다.
+해당 주소를 url창에 넣고 엔터치면 된다.
 
 ## 결과 해석
 

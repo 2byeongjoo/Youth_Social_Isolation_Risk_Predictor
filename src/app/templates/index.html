@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>청년 사회적 고립 위험도 예측</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>청년 사회적 고립 위험도 예측</h1>
+        <p class="description">
+            설문 응답 값을 입력하면 학습된 모델을 기반으로 고립은둔 여부를 예측합니다.
+        </p>
+
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="A7">평소 외출 수준</label>
+                <select id="A7" name="A7" required>
+                    <option value="1">1 - 직장이나 학교로 평일은 매일 외출</option>
+                    <option value="2">2 - 직장이나 학교 외에도 자주 외출</option>
+                    <option value="3">3 - 평일에는 주로 외출</option>
+                    <option value="4">4 - 가끔 외출</option>
+                    <option value="5">5 - 집 근처만 외출</option>
+                    <option value="6">6 - 거의 외출하지 않음</option>
+                    <option value="7">7 - 집 안에서는 이동하나 외출 거의 없음</option>
+                    <option value="8">8 - 자기 방에서 거의 나오지 않음</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="A10">지난 2주 동안 만나 이야기 나눈 사람 수</label>
+                <input type="number" id="A10" name="A10" min="0" step="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="A11">지난 2주 동안 누군가와 대화하거나 함께 시간을 보낸 횟수</label>
+                <input type="number" id="A11" name="A11" min="0" step="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="A13_1">가족들과의 대면 교류 빈도</label>
+                <input type="number" id="A13_1" name="A13_1" min="1" max="6" required>
+            </div>
+
+            <div class="form-group">
+                <label for="A13_3">친한 친구나 친한 사람과의 대면 교류 빈도</label>
+                <input type="number" id="A13_3" name="A13_3" min="1" max="6" required>
+            </div>
+
+            <div class="form-group">
+                <label for="A13_4">직장, 학교, 동네 사람들과의 대면 교류 빈도</label>
+                <input type="number" id="A13_4" name="A13_4" min="1" max="6" required>
+            </div>
+
+            <div class="form-group">
+                <label for="A17">온라인 커뮤니티, SNS, 메신저 등에서 대화하는지 여부</label>
+                <select id="A17" name="A17" required>
+                    <option value="1">1 - 예</option>
+                    <option value="2">2 - 아니오</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="A18_1">나와 같이 있어 줄 사람이 부족하다고 느끼는 정도</label>
+                <input type="number" id="A18_1" name="A18_1" min="1" max="4" required>
+            </div>
+
+            <div class="form-group">
+                <label for="A18_3">혼자 남겨진 것 같다고 느끼는 정도</label>
+                <input type="number" id="A18_3" name="A18_3" min="1" max="4" required>
+            </div>
+
+            <div class="form-group">
+                <label for="B1_2">평소 가족과 대화를 자주 하는 편인지</label>
+                <input type="number" id="B1_2" name="B1_2" min="1" max="5" required>
+            </div>
+
+            <button type="submit">예측하기</button>
+        </form>
+    </div>
+</body>
+</html>
