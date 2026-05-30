@@ -37,6 +37,7 @@ Youth_Social_Isolation_Risk_Predictor/
 ├─ .gitignore
 ├─ README.md
 └─ requirements.txt
+```
 
 폴더 및 파일 설명
 data/
