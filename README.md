@@ -9,6 +9,7 @@
 
 ## 프로젝트 폴더 구조
 
+```text
 Youth_Social_Isolation_Risk_Predictor/
 ├─ data/
 │  ├─ raw/
